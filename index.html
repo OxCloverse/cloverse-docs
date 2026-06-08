@@ -188,6 +188,7 @@ body.dark .step-image { border-color: #2a2a35; box-shadow: 0 4px 16px rgba(0,0,0
         <div class="lang-option" data-lang="id">🇮🇩 Bahasa Indonesia</div>
         <div class="lang-option" data-lang="tl">🇵🇭 Filipino</div>
         <div class="lang-option" data-lang="pt">🇵🇹 Português</div>
+        <div class="lang-option" data-lang="es">🇪🇸 Español</div>
       </div>
     </div>
   </div>
@@ -1289,6 +1290,134 @@ const translations = {
     contract_q1_title: "O que é um \"Endereço de Contrato\"?",
     contract_q1_body: "Um endereço de contrato é a localização on-chain do contrato inteligente que executa o jogo. Pense nele como um endereço postal público para o próprio código. Qualquer pessoa pode procurá-lo em um block explorer (como o ChiliScan para a Chiliz Chain) para inspecionar o que o contrato faz e verificar que a plataforma está usando exatamente o que afirma.",
     contract_q1_tail: "Se você quiser confirmar que o feed de preços é legítimo, copiar este endereço em um block explorer é como fazer isso."
+  },
+  es: {
+    sidebar_overview_label: "VISIÓN GENERAL",
+    sidebar_guide_label: "GUÍA DEL USUARIO",
+    sidebar_infra_label: "INFRAESTRUCTURA",
+    nav_overview: "Visión General",
+    nav_how: "Cómo Funciona",
+    nav_how_to_use: "Cómo Usar",
+    nav_mechanics: "Mecánica y Comisiones",
+    nav_outcomes: "Resultados y Reglas",
+    nav_oracle: "Feeds de Precio (Oracle)",
+    nav_contracts: "Direcciones de Contrato",
+    search_placeholder: "Buscar...",
+
+    overview_title: "UP &amp; DOWN",
+    overview_subtitle: "Predice la tendencia, sube tu apuesta y gana.",
+    overview_p1: "UP &amp; DOWN es una plataforma de predicción descentralizada y de alta fidelidad construida en la Chiliz Chain. Te permite aprovechar los movimientos de precio de CHZ en tiempo real.",
+    overview_callout_title: "En una frase:",
+    overview_callout_body: "¿Crees que el precio de CHZ estará más alto en 10 minutos que ahora? Apuesta UP. ¿Crees que estará más bajo? Apuesta DOWN. Si aciertas, compartes el bote con todos los demás de tu lado.",
+
+    how_title: "Resumen: Cómo Funciona",
+    how_subtitle: "Un resumen paso a paso del flujo de predicción.",
+    how_step1: "UP &amp; DOWN admite exclusivamente el par <strong>CHZ/USD</strong>.",
+    how_step2: "Predice si el precio de CHZ estará más alto (<strong>UP</strong>) o más bajo (<strong>DOWN</strong>) que el Locked Price cuando termine la ronda de 10 minutos.",
+    how_step3: "Introduce la cantidad de CHZ que desees.",
+    how_step4: "Una vez que tu entrada se envía para una ronda \"LIVE\", <strong>no se puede editar, cancelar ni eliminar</strong>.",
+    how_step5_intro: "Ganar o perder:",
+    how_step5_up: "<strong>UP Gana:</strong> Si el Closed Price &gt; Locked Price al final de la ronda.",
+    how_step5_down: "<strong>DOWN Gana:</strong> Si el Closed Price &lt; Locked Price al final de la ronda.",
+
+    how_q1_title: "¿Qué es el Locked Price?",
+    how_q1_body: "El Locked Price es el precio CHZ/USD capturado en el momento exacto en que comienza una ronda. Es el punto de referencia con el que se compara tu predicción; piénsalo como la \"línea de salida\". Sea lo que sea que predigas (UP o DOWN), estás prediciendo dónde estará CHZ en relación con este número 10 minutos después.",
+    how_q1_ex_label: "Ejemplo.",
+    how_q1_ex_body: " Una nueva ronda abre a las 14:00. En ese momento exacto, CHZ/USD está en $0.0820. Ese pasa a ser el Locked Price de esta ronda. Diez minutos después, si CHZ está por encima de $0.0820 → gana UP. Por debajo de $0.0820 → gana DOWN.",
+
+    how_q2_title: "¿Qué es el Closed Price?",
+    how_q2_body: "El Closed Price es el precio CHZ/USD capturado en el momento exacto en que termina la ronda, 10 minutos después de fijarse el Locked Price. Es el número que decide quién gana.",
+    how_q2_ex_label: "Ejemplo.",
+    how_q2_ex_body: " Continuando con lo anterior: la ronda comenzó a las 14:00 con un Locked Price de $0.0820. A las 14:10, CHZ/USD está en $0.0834. El Closed Price ($0.0834) es mayor que el Locked Price ($0.0820), así que UP gana esta ronda.",
+
+    how_q3_title: "¿Qué es una \"Ronda\"?",
+    how_q3_body: "Una ronda es un ciclo completo de predicción de 10 minutos. Cada ronda tiene tres fases:",
+    how_q3_p1: "<strong>Open (Apuestas):</strong> Los jugadores eligen UP o DOWN y envían sus entradas.",
+    how_q3_p2: "<strong>Live (Bloqueada):</strong> Las entradas se bloquean, se fija el Locked Price y el precio se mueve libremente en el mercado.",
+    how_q3_p3: "<strong>Close (Liquidación):</strong> Se registra el Closed Price, se decide el lado ganador y las recompensas quedan disponibles para reclamar.",
+    how_q3_tail: "Las rondas se suceden de forma continua, una tras otra. Mientras una ronda se está liquidando, la siguiente ya está recibiendo entradas, así que siempre hay una ronda para participar.",
+
+    how_q4_title: "¿Por qué no puedo cancelar o editar una entrada LIVE?",
+    how_q4_body: "Una vez que una ronda pasa a LIVE, se fija el Locked Price y el resultado empieza a decidirse en tiempo real. Si los jugadores pudieran editar o cancelar en este punto, cualquiera que observara el precio podría simplemente retirarse en el momento en que empezara a moverse en su contra, lo que sería injusto para todos los demás del pool. Para mantener el juego justo para todos los jugadores, cada entrada es definitiva en el momento en que la ronda pasa a live.",
+
+    htu_title: "Cómo Usar UP &amp; DOWN",
+    htu_subtitle: "Una guía paso a paso para jugar tu primera ronda.",
+    htu_s1_title: "Paso 1. Lee el gráfico y el Locked Price",
+    htu_s1_body: "En la parte superior de la página verás el gráfico CHZ/USD en vivo. El indicador <strong>LOCK / PRICE</strong> (arriba a la derecha, recuadro verde) muestra el Locked Price de la ronda actual y el precio más reciente de CHZ. La etiqueta <strong>LOCKED ▲</strong> dentro del gráfico señala dónde está el Locked Price en el eje de precios. Si el Locked Price está fuera del rango visible, la etiqueta aparece en el borde superior con una flecha ▲ que indica \"por encima del rango visible\".",
+    htu_s2_title: "Paso 2. Encuentra la ronda actual y la siguiente",
+    htu_s2_body: "Verás dos tarjetas. La <strong>tarjeta superior</strong> es la ronda en curso (LIVE), donde puedes ver la proporción del pool pero ya no puedes entrar. La <strong>tarjeta inferior</strong> es la <strong>siguiente ronda</strong>, donde colocas tu predicción. Debes enviarla antes de que termine la ronda en vivo.",
+    htu_s3_title: "Paso 3. Confirma tu entrada",
+    htu_s3_body: "Después de elegir UP o DOWN, se abre una ventana Enter. Define tu cantidad y luego revisa <strong>Estimated win</strong>, que es el pago estimado según las proporciones actuales del pool. El aviso de abajo te indica que el <strong>multiplicador se finaliza cuando la ronda se bloquea</strong>, por lo que el pago real puede variar ligeramente. Cuando estés listo, haz clic en <strong>Enter X CHZ on UP / DOWN</strong> para confirmar.",
+    htu_s4_title: "Paso 4. Sigue tu posición de entrada",
+    htu_s4_body: "Una vez confirmada, tu tarjeta muestra <strong>ENTERED</strong> (tu cantidad y dirección) y <strong>EST. PAYOUT</strong>, ambos actualizados en tiempo real a medida que cambian las proporciones del pool. El borde rosa/rojo alrededor de la tarjeta significa que esta es tu posición bloqueada. Ya no puedes cancelar; solo observa cómo se resuelve la ronda.",
+    htu_s5_title: "Paso 5. La ronda termina, fase Calculating",
+    htu_s5_body: "Cuando termina la fase en vivo, la ventana <strong>Calculating</strong> aparece brevemente mientras el sistema verifica el Closed Price on-chain y calcula el resultado. Normalmente solo tarda unos segundos. Tu tarjeta de entrada bloqueada sigue resaltada con un borde rojo.",
+    htu_s6_title: "Paso 6. Indicador de reclamo en tu billetera",
+    htu_s6_body: "Una vez que la ronda se liquida a tu favor, el botón de la billetera (arriba a la derecha) obtiene un <strong>borde rojo</strong> para indicar que tienes una recompensa sin reclamar. Haz clic en la billetera y luego en <strong>PORTFOLIO</strong> para ir a la pantalla de reclamo.",
+    htu_s7_title: "Paso 7. Reclama desde la página Rounds",
+    htu_s7_body: "En la tabla <strong>Rounds</strong> verás todas tus entradas anteriores. Cualquier victoria sin reclamar tiene un botón <strong>Claim</strong> verde en su fila. Para reclamar todo a la vez, haz clic en <strong>Claim all →</strong> en la esquina superior derecha de la página.",
+
+    mech_title: "Mecánica y Comisiones",
+    mech_subtitle: "Detalles técnicos sobre rondas, comisiones y cálculo de pagos.",
+    mech_chain: "<strong>Blockchain:</strong> Funciona con Chiliz Chain (Mainnet).",
+    mech_round: "<strong>Frecuencia de Rondas:</strong> Las rondas continuas ocurren cada 10 minutos.",
+    mech_minentry: "<strong>Entrada Mínima:</strong> 30 CHZ por ronda (sin límite máximo).",
+    mech_fee: "<strong>Comisión de la Plataforma:</strong> Una pequeña parte del bote total se asigna a $FAN. Estos fondos se destinan al desarrollo continuo de la plataforma y también están sujetos a buyback y burn.",
+    mech_claim: "<strong>Ganancias:</strong> Los usuarios pueden reclamar sus recompensas inmediatamente después de que la ronda se finalice y se verifiquen los datos on-chain.",
+    mech_payout_title: "Cálculo de Pagos",
+    mech_payout_desc: "Los pagos se basan en la proporción de apuestas en cada pool:",
+    mech_formula: "Proporción de Pago (Pool UP) = Valor total de ambos pools &divide; Valor del Pool UP<br>Proporción de Pago (Pool DOWN) = Valor total de ambos pools &divide; Valor del Pool DOWN",
+    mech_q1_title: "¿Cómo se calculan realmente los pagos?",
+    mech_q1_body: "Tu recompensa depende de cuántas personas apostaron en tu lado frente al otro lado. Cuantas menos personas haya en el lado ganador, mayor será la parte de cada ganador. Aquí tienes un ejemplo concreto.",
+    mech_q1_ex_label: "Ejemplo.",
+    mech_q1_ex_body: " Una ronda cierra con el pool UP en 1.000 CHZ y el pool DOWN en 2.000 CHZ, combinados 3.000 CHZ. Apuestas 30 CHZ en UP. Proporción de Pago (UP) = 3.000 ÷ 1.000 = 3x. Gana UP → tu recompensa bruta = 30 × 3 = 90 CHZ, menos una pequeña comisión de la plataforma. Como UP era el lado más pequeño, cada ganador de UP obtuvo un multiplicador mayor. <strong>Lado más pequeño = mayor recompensa por CHZ.</strong>",
+    mech_q2_title: "¿Qué significa \"buyback y burn\"?",
+    mech_q2_body: "Una parte de las comisiones de la plataforma se usa para <strong>comprar tokens $FAN en el mercado abierto</strong> y luego destruirlos permanentemente (\"burn\"). La quema reduce el suministro total de $FAN con el tiempo, lo que puede respaldar su valor a largo plazo. En resumen: cada ronda que juegas contribuye un poco a hacer que $FAN sea más escaso.",
+    mech_q3_title: "¿Qué significa \"rondas continuas cada 10 minutos\"?",
+    mech_q3_body: "Una nueva ronda abre cada 10 minutos, como un reloj. No tienes que esperar a que una ronda termine por completo antes de unirte a la siguiente; las rondas se solapan, así que siempre hay una aceptando entradas. Si no te sientes seguro con la ronda actual, puedes saltártela y la siguiente oportunidad está a solo unos minutos.",
+
+    out_title: "Resultados y Reglas Especiales",
+    out_subtitle: "Qué ocurre después de que una ronda cierra.",
+    out_victory: "<strong>Victoria:</strong> Comparte el bote total con los demás ganadores.",
+    out_loss: "<strong>Derrota:</strong> Tu entrada pasa al lado ganador del pool.",
+    out_tie: "<strong>Empate (Locked Price = Closed Price):</strong> En el raro caso de una coincidencia exacta de precio, la casa retiene todas las entradas.",
+    out_single: "<strong>Apuesta Unilateral:</strong> Si no hay apuestas opuestas, los ganadores recuperan su entrada inicial menos la comisión de servicio.",
+    out_cancel: "<strong>Cancelación del Sistema:</strong> Si ocurre un error de Oracle, todos los participantes reciben un reembolso del 100% de su entrada inicial.",
+    out_q1_title: "¿Qué ocurre en un empate?",
+    out_q1_body: "Un empate significa que el Closed Price es <strong>exactamente igual</strong> al Locked Price, hasta el último decimal. Como CHZ se rastrea con muchos decimales y se actualiza cada segundo, esto es extremadamente raro, pero puede pasar.",
+    out_q1_ex_label: "Ejemplo.",
+    out_q1_ex_body: " Locked Price = $0.08200000, Closed Price = $0.08200000. Como el precio no subió ni bajó, ni UP ni DOWN fue \"correcto\". La ronda es un empate y todas las entradas van a la casa.",
+    out_q2_title: "¿Y si nadie apuesta en el otro lado?",
+    out_q2_body: "Una ronda solo tiene un mercado real cuando hay apuestas en <strong>ambos</strong> UP y DOWN. Si todos se amontonan en un lado, no hay pool opuesto del que ganar.",
+    out_q2_ex_label: "Ejemplo.",
+    out_q2_ex_body: " Una ronda abre. 50 jugadores apuestan un total de 800 CHZ en UP. 0 jugadores apuestan en DOWN. UP \"gana\" porque el precio sube, pero no hay nada que tomar de un pool DOWN inexistente. En este caso, cada jugador de UP simplemente recupera <strong>su entrada inicial, menos la pequeña comisión de servicio</strong>. No se te penaliza por ser el único lado; simplemente no obtienes multiplicador.",
+    out_q3_title: "¿Qué es un \"error de Oracle\" y qué ocurre entonces?",
+    out_q3_body: "La plataforma depende de un feed de precios (el Oracle) para saber cuál era el CHZ/USD al inicio y al final de cada ronda. Si el Oracle no logra entregar un precio válido por algún motivo (por ejemplo, una interrupción temporal, datos no válidos o <strong>una caída de la propia Pyth Network</strong>), la ronda no se puede liquidar de forma justa.",
+    out_q3_tail: "Cuando esto ocurre, la ronda se <strong>cancela</strong> y cada participante recibe un <strong>reembolso del 100%</strong> de su entrada inicial, gane o pierda. Esta protección se aplica tanto si el problema está de nuestro lado como del lado de Pyth Network. Nadie es penalizado por un problema que no causó.",
+
+    oracle_title: "Feeds de Precio (Oracle)",
+    oracle_subtitle: "Cómo UP &amp; DOWN determina el precio de CHZ para cada ronda.",
+    oracle_intro: "UP &amp; DOWN prioriza la precisión y la velocidad utilizando <strong>Pyth Network</strong> como su principal fuente de datos.",
+    oracle_th_chain: "Chain",
+    oracle_th_market: "Mercado",
+    oracle_th_purpose: "Propósito",
+    oracle_th_oracle: "Oracle",
+    oracle_td_purpose: "Fija el Locked Price y el Closed Price (actualizado aproximadamente cada 20 segundos).",
+    oracle_q1_title: "¿Qué es un \"Price Oracle\"?",
+    oracle_q1_body: "Las blockchains por sí solas no pueden ver el mundo exterior; no saben de forma natural cosas como \"¿a cuánto se cotiza CHZ ahora mismo?\" Un Oracle es un servicio que lleva datos del mundo real (como precios de exchanges) a la blockchain de forma verificable, para que los contratos inteligentes puedan usarlos.",
+    oracle_q1_tail: "En UP &amp; DOWN, el Oracle es lo que le indica al contrato inteligente el precio CHZ/USD al inicio y al final de cada ronda. Sin él, el contrato no tiene forma de decidir quién ganó.",
+    oracle_why_title: "¿Por qué Pyth Network?",
+    oracle_why_body: "A diferencia de los oracles tradicionales, Pyth ofrece <strong>latencia inferior a un segundo</strong> y <strong>datos de nivel institucional directamente de fuentes financieras de primera mano</strong>; es decir, los propios exchanges y creadores de mercado que producen los precios, no un intermediario.",
+    oracle_why_list_intro: "Esto garantiza que los precios usados para la liquidación sean:",
+    oracle_why_transparent: "<strong>Transparentes:</strong> cualquiera puede verificar los datos on-chain.",
+    oracle_why_resistant: "<strong>Resistentes a la manipulación:</strong> los precios se agregan de muchas fuentes de primer nivel, así que ningún actor malicioso por sí solo puede moverlos.",
+    oracle_why_accurate: "<strong>Precisos:</strong> reflejan el verdadero valor de mercado global de CHZ en el momento exacto en que cierra una ronda.",
+
+    contract_title: "Direcciones de Contrato",
+    contract_subtitle: "Direcciones on-chain utilizadas por la plataforma UP &amp; DOWN.",
+    contract_q1_title: "¿Qué es una \"Dirección de Contrato\"?",
+    contract_q1_body: "Una dirección de contrato es la ubicación on-chain del contrato inteligente que ejecuta el juego. Piénsalo como una dirección postal pública para el propio código. Cualquiera puede buscarla en un block explorer (como ChiliScan para Chiliz Chain) para inspeccionar qué hace el contrato y verificar que la plataforma usa exactamente lo que afirma.",
+    contract_q1_tail: "Si quieres confirmar que el feed de precios es legítimo, copiar esta dirección en un block explorer es la forma de hacerlo."
   }
 };
 
@@ -1317,7 +1446,7 @@ const langBtn = document.getElementById('langBtn');
 const langMenu = document.getElementById('langMenu');
 const langOptions = document.querySelectorAll('.lang-option');
 const currentLangSpan = document.getElementById('currentLang');
-const langNames = { en: 'English', zh: '中文', ja: '日本語', th: 'ไทย', id: 'Bahasa Indonesia', tr: 'Türkçe', tl: 'Filipino', pt: 'Português' };
+const langNames = { en: 'English', zh: '中文', ja: '日本語', th: 'ไทย', id: 'Bahasa Indonesia', tr: 'Türkçe', tl: 'Filipino', pt: 'Português', es: 'Español' };
 
 langBtn.addEventListener('click', (e) => {
   e.stopPropagation();
