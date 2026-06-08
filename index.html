@@ -280,7 +280,7 @@ body.dark .step-image { border-color: #2a2a35; box-shadow: 0 4px 16px rgba(0,0,0
     <ul>
       <li data-i18n="mech_chain"><strong>Blockchain:</strong> Powered by Chiliz Chain (Mainnet).</li>
       <li data-i18n="mech_round"><strong>Round Frequency:</strong> Rolling rounds occur every 10 minutes.</li>
-      <li data-i18n="mech_minentry"><strong>Minimum Entry:</strong> 10 CHZ per round (no upper limit).</li>
+      <li data-i18n="mech_minentry"><strong>Minimum Entry:</strong> 30 CHZ per round (no upper limit).</li>
       <li data-i18n="mech_fee"><strong>Platform Fee:</strong> A small portion of the total prize pool is allocated to $FAN. These funds are dedicated to continuous platform development and are also subject to buyback and burn.</li>
       <li data-i18n="mech_claim"><strong>Winnings:</strong> Users can claim their rewards immediately after a round is finalized and the on-chain data is verified.</li>
     </ul>
@@ -296,7 +296,7 @@ body.dark .step-image { border-color: #2a2a35; box-shadow: 0 4px 16px rgba(0,0,0
     <p data-i18n="mech_q1_body">Your reward depends on how many people bet on your side vs. the other side. The fewer people on the winning side, the bigger each winner's share. Here is a concrete walkthrough.</p>
     <div class="callout">
       <strong data-i18n="mech_q1_ex_label">Example.</strong>
-      <span data-i18n="mech_q1_ex_body"> A round closes with UP pool 1,000 CHZ and DOWN pool 2,000 CHZ, combined 3,000 CHZ. You bet 10 CHZ on UP. Payout Ratio (UP) = 3,000 ÷ 1,000 = 3x. UP wins → your gross reward = 10 × 3 = 30 CHZ, minus a small platform fee. Because UP was the smaller side, each UP winner got a bigger multiplier. <strong>Smaller side = bigger reward per CHZ.</strong></span>
+      <span data-i18n="mech_q1_ex_body"> A round closes with UP pool 1,000 CHZ and DOWN pool 2,000 CHZ, combined 3,000 CHZ. You bet 30 CHZ on UP. Payout Ratio (UP) = 3,000 ÷ 1,000 = 3x. UP wins → your gross reward = 30 × 3 = 90 CHZ, minus a small platform fee. Because UP was the smaller side, each UP winner got a bigger multiplier. <strong>Smaller side = bigger reward per CHZ.</strong></span>
     </div>
 
     <h2 data-i18n="mech_q3_title">What does "rolling rounds every 10 minutes" mean?</h2>
@@ -464,7 +464,7 @@ const translations = {
     mech_subtitle: "라운드, 수수료, 배당 계산에 대한 기술적 세부사항입니다.",
     mech_chain: "<strong>블록체인:</strong> 칠리즈 체인(메인넷) 기반.",
     mech_round: "<strong>라운드 주기:</strong> 10분마다 롤링 라운드가 진행됩니다.",
-    mech_minentry: "<strong>최소 참여 금액:</strong> 라운드당 10 CHZ (상한 없음).",
+    mech_minentry: "<strong>최소 참여 금액:</strong> 라운드당 30 CHZ (상한 없음).",
     mech_fee: "<strong>플랫폼 수수료:</strong> 총 상금 풀의 일부가 $FAN에 배분됩니다. 이 자금은 지속적인 플랫폼 개발에 사용되며, 바이백 앤 번의 대상이기도 합니다.",
     mech_claim: "<strong>상금 수령:</strong> 라운드가 확정되고 온체인 데이터가 검증된 직후 보상을 즉시 수령할 수 있습니다.",
     mech_payout_title: "배당 계산",
@@ -473,7 +473,7 @@ const translations = {
     mech_q1_title: "배당은 실제로 어떻게 계산되나요?",
     mech_q1_body: "본인 보상은 본인 쪽에 베팅한 사람 수와 반대편 인원 수에 따라 달라집니다. 승리한 쪽 인원이 적을수록 각 승자의 몫이 커집니다. 구체적인 예시로 살펴봅시다.",
     mech_q1_ex_label: "예시.",
-    mech_q1_ex_body: " UP 풀 1,000 CHZ, DOWN 풀 2,000 CHZ, 합쳐서 3,000 CHZ인 상태로 라운드가 종료됩니다. 본인이 UP에 10 CHZ를 베팅했다면 UP 배당률 = 3,000 ÷ 1,000 = 3배. UP 승리 시 총 보상 = 10 × 3 = 30 CHZ에서 소액의 플랫폼 수수료를 차감합니다. UP이 적은 쪽이었기 때문에 각 UP 승자가 더 큰 배율을 받은 것입니다. <strong>적은 쪽 = CHZ당 보상이 더 큼.</strong>",
+    mech_q1_ex_body: " UP 풀 1,000 CHZ, DOWN 풀 2,000 CHZ, 합쳐서 3,000 CHZ인 상태로 라운드가 종료됩니다. 본인이 UP에 30 CHZ를 베팅했다면 UP 배당률 = 3,000 ÷ 1,000 = 3배. UP 승리 시 총 보상 = 30 × 3 = 90 CHZ에서 소액의 플랫폼 수수료를 차감합니다. UP이 적은 쪽이었기 때문에 각 UP 승자가 더 큰 배율을 받은 것입니다. <strong>적은 쪽 = CHZ당 보상이 더 큼.</strong>",
     mech_q2_title: "\"바이백 앤 번(Buyback and Burn)\"이 뭔가요?",
     mech_q2_body: "플랫폼 수수료의 일부를 사용해 <strong>공개 시장에서 $FAN 토큰을 매입한 뒤 영구적으로 소각(burn)</strong>합니다. 소각은 시간이 지나면서 $FAN의 총 공급량을 줄여 장기적 가치를 뒷받침할 수 있습니다. 즉, 라운드 한 번을 플레이할 때마다 $FAN을 더 희소하게 만드는 데 조금씩 기여하게 됩니다.",
     mech_q3_title: "\"10분마다 롤링 라운드\"가 뭔가요?",
@@ -592,7 +592,7 @@ const translations = {
     mech_subtitle: "关于回合、费用和支付计算的技术细节。",
     mech_chain: "<strong>区块链：</strong>基于 Chiliz Chain（主网）。",
     mech_round: "<strong>回合频率：</strong>每 10 分钟进行滚动回合。",
-    mech_minentry: "<strong>最低参与：</strong>每回合 10 CHZ（无上限）。",
+    mech_minentry: "<strong>最低参与：</strong>每回合 30 CHZ（无上限）。",
     mech_fee: "<strong>平台费用：</strong>奖池总额的一小部分分配给 $FAN。这些资金用于持续的平台开发，也适用于回购和销毁。",
     mech_claim: "<strong>奖金领取：</strong>回合确定并且链上数据验证后，用户可以立即领取奖励。",
     mech_payout_title: "支付计算",
@@ -601,7 +601,7 @@ const translations = {
     mech_q1_title: "支付实际上是如何计算的？",
     mech_q1_body: "您的奖励取决于多少人下注在您这一方和另一方。获胜方人数越少，每个赢家分得越多。下面是一个具体的演练。",
     mech_q1_ex_label: "示例。",
-    mech_q1_ex_body: " 一个回合结束时 UP 池 1,000 CHZ，DOWN 池 2,000 CHZ，合计 3,000 CHZ。您在 UP 上下注 10 CHZ。UP 支付比率 = 3,000 ÷ 1,000 = 3 倍。UP 获胜 → 您的总奖励 = 10 × 3 = 30 CHZ，减去少量平台费。因为 UP 是较小的一方，所以每个 UP 赢家获得更大的倍数。<strong>较小方 = 每 CHZ 奖励更大。</strong>",
+    mech_q1_ex_body: " 一个回合结束时 UP 池 1,000 CHZ，DOWN 池 2,000 CHZ，合计 3,000 CHZ。您在 UP 上下注 30 CHZ。UP 支付比率 = 3,000 ÷ 1,000 = 3 倍。UP 获胜 → 您的总奖励 = 30 × 3 = 90 CHZ，减去少量平台费。因为 UP 是较小的一方，所以每个 UP 赢家获得更大的倍数。<strong>较小方 = 每 CHZ 奖励更大。</strong>",
     mech_q2_title: "\"回购和销毁\"是什么意思？",
     mech_q2_body: "平台费用的一部分用于<strong>在公开市场上购买 $FAN 代币</strong>，然后永久销毁（\"burn\"）。销毁随着时间减少 $FAN 的总供应量，从长远来看可以支持其价值。简而言之：您每玩一个回合，都会为让 $FAN 更稀缺做出小小贡献。",
     mech_q3_title: "\"每 10 分钟滚动回合\"是什么意思？",
@@ -720,7 +720,7 @@ const translations = {
     mech_subtitle: "ラウンド、手数料、配当計算の技術的詳細。",
     mech_chain: "<strong>ブロックチェーン:</strong> Chiliz Chain（メインネット）で稼働。",
     mech_round: "<strong>ラウンド頻度:</strong> 10 分ごとにローリングラウンドが実施されます。",
-    mech_minentry: "<strong>最低エントリー:</strong> 1 ラウンドあたり 10 CHZ（上限なし）。",
+    mech_minentry: "<strong>最低エントリー:</strong> 1 ラウンドあたり 30 CHZ（上限なし）。",
     mech_fee: "<strong>プラットフォーム手数料:</strong> 賞金プール総額の一部が $FAN に配分されます。この資金は継続的なプラットフォーム開発に使用され、バイバック＆バーンの対象でもあります。",
     mech_claim: "<strong>賞金受取:</strong> ラウンドが確定しオンチェーンデータが検証された直後に報酬を受け取れます。",
     mech_payout_title: "配当計算",
@@ -729,7 +729,7 @@ const translations = {
     mech_q1_title: "配当は実際どのように計算されますか？",
     mech_q1_body: "報酬は、あなたの側に賭けた人数と相手側の人数に依存します。勝利側の人数が少ないほど、各勝者の取り分が大きくなります。具体的なウォークスルーで見てみましょう。",
     mech_q1_ex_label: "例。",
-    mech_q1_ex_body: " UP プール 1,000 CHZ、DOWN プール 2,000 CHZ、合計 3,000 CHZ でラウンドが終了します。あなたは UP に 10 CHZ を賭けました。UP 配当率 = 3,000 ÷ 1,000 = 3 倍。UP 勝利 → 総報酬 = 10 × 3 = 30 CHZ、ここから少額のプラットフォーム手数料を差し引きます。UP が少数派だったので、各 UP 勝者は大きい倍率を得ました。<strong>少数派 = CHZ あたりの報酬が大きい。</strong>",
+    mech_q1_ex_body: " UP プール 1,000 CHZ、DOWN プール 2,000 CHZ、合計 3,000 CHZ でラウンドが終了します。あなたは UP に 30 CHZ を賭けました。UP 配当率 = 3,000 ÷ 1,000 = 3 倍。UP 勝利 → 総報酬 = 30 × 3 = 90 CHZ、ここから少額のプラットフォーム手数料を差し引きます。UP が少数派だったので、各 UP 勝者は大きい倍率を得ました。<strong>少数派 = CHZ あたりの報酬が大きい。</strong>",
     mech_q2_title: "「バイバック＆バーン」とは何ですか？",
     mech_q2_body: "プラットフォーム手数料の一部は、<strong>市場で $FAN トークンを買い戻し</strong>、その後永久に破壊（バーン）するために使われます。バーンは時間とともに $FAN の総供給量を減らし、長期的価値を支える可能性があります。要するに、ラウンドをプレイするたびに、$FAN をより希少にすることに少しずつ貢献していることになります。",
     mech_q3_title: "「10 分ごとのローリングラウンド」とは？",
@@ -848,7 +848,7 @@ const translations = {
     mech_subtitle: "รายละเอียดทางเทคนิคเกี่ยวกับรอบ ค่าธรรมเนียม และการคำนวณการจ่ายเงิน",
     mech_chain: "<strong>บล็อกเชน:</strong> ขับเคลื่อนโดย Chiliz Chain (Mainnet)",
     mech_round: "<strong>ความถี่ของรอบ:</strong> รอบหมุนเวียนทุก 10 นาที",
-    mech_minentry: "<strong>เข้าร่วมขั้นต่ำ:</strong> 10 CHZ ต่อรอบ (ไม่มีขีดจำกัดสูงสุด)",
+    mech_minentry: "<strong>เข้าร่วมขั้นต่ำ:</strong> 30 CHZ ต่อรอบ (ไม่มีขีดจำกัดสูงสุด)",
     mech_fee: "<strong>ค่าธรรมเนียมแพลตฟอร์ม:</strong> ส่วนเล็กน้อยของพูลรางวัลทั้งหมดจะถูกจัดสรรให้ $FAN เงินทุนเหล่านี้มุ่งเน้นการพัฒนาแพลตฟอร์มอย่างต่อเนื่องและอยู่ภายใต้การซื้อคืนและเผา",
     mech_claim: "<strong>รางวัล:</strong> ผู้ใช้สามารถเรียกร้องรางวัลได้ทันทีหลังจากรอบสิ้นสุดและข้อมูลบนเชนได้รับการยืนยัน",
     mech_payout_title: "การคำนวณการจ่ายเงิน",
@@ -857,7 +857,7 @@ const translations = {
     mech_q1_title: "การจ่ายเงินคำนวณอย่างไรจริงๆ?",
     mech_q1_body: "รางวัลของคุณขึ้นอยู่กับจำนวนคนที่เดิมพันฝั่งคุณเทียบกับฝั่งตรงข้าม ยิ่งคนฝั่งที่ชนะน้อย แต่ละผู้ชนะก็ได้สัดส่วนมาก ลองดูตัวอย่างที่เป็นรูปธรรม",
     mech_q1_ex_label: "ตัวอย่าง.",
-    mech_q1_ex_body: " รอบจบโดย UP พูล 1,000 CHZ DOWN พูล 2,000 CHZ รวม 3,000 CHZ คุณเดิมพัน 10 CHZ ฝั่ง UP อัตราจ่าย UP = 3,000 ÷ 1,000 = 3 เท่า UP ชนะ → รางวัลรวม = 10 × 3 = 30 CHZ หักค่าธรรมเนียมแพลตฟอร์มเล็กน้อย เนื่องจาก UP เป็นฝั่งเล็กกว่า ผู้ชนะ UP แต่ละคนจึงได้ตัวคูณใหญ่กว่า <strong>ฝั่งเล็ก = รางวัลต่อ CHZ มากกว่า</strong>",
+    mech_q1_ex_body: " รอบจบโดย UP พูล 1,000 CHZ DOWN พูล 2,000 CHZ รวม 3,000 CHZ คุณเดิมพัน 30 CHZ ฝั่ง UP อัตราจ่าย UP = 3,000 ÷ 1,000 = 3 เท่า UP ชนะ → รางวัลรวม = 30 × 3 = 90 CHZ หักค่าธรรมเนียมแพลตฟอร์มเล็กน้อย เนื่องจาก UP เป็นฝั่งเล็กกว่า ผู้ชนะ UP แต่ละคนจึงได้ตัวคูณใหญ่กว่า <strong>ฝั่งเล็ก = รางวัลต่อ CHZ มากกว่า</strong>",
     mech_q2_title: "\"การซื้อคืนและเผา (Buyback and Burn)\" หมายความว่าอย่างไร?",
     mech_q2_body: "ส่วนหนึ่งของค่าธรรมเนียมแพลตฟอร์มใช้เพื่อ<strong>ซื้อโทเค็น $FAN ในตลาดเปิด</strong> แล้วทำลาย (\"burn\") อย่างถาวร การเผาช่วยลดอุปทานรวมของ $FAN ลงตามเวลา ซึ่งสามารถสนับสนุนมูลค่าระยะยาวได้ สรุปคือ ทุกรอบที่คุณเล่นมีส่วนเล็กน้อยช่วยให้ $FAN หายากขึ้น",
     mech_q3_title: "\"รอบหมุนเวียนทุก 10 นาที\" หมายความว่าอย่างไร?",
@@ -976,7 +976,7 @@ const translations = {
     mech_subtitle: "Detail teknis tentang ronde, biaya, dan perhitungan pembayaran.",
     mech_chain: "<strong>Blockchain:</strong> Didukung oleh Chiliz Chain (Mainnet).",
     mech_round: "<strong>Frekuensi Ronde:</strong> Ronde bergulir terjadi setiap 10 menit.",
-    mech_minentry: "<strong>Entri Minimum:</strong> 10 CHZ per ronde (tanpa batas maksimum).",
+    mech_minentry: "<strong>Entri Minimum:</strong> 30 CHZ per ronde (tanpa batas maksimum).",
     mech_fee: "<strong>Biaya Platform:</strong> Sebagian kecil dari total hadiah pool dialokasikan ke $FAN. Dana ini didedikasikan untuk pengembangan platform berkelanjutan dan juga tunduk pada buyback dan burn.",
     mech_claim: "<strong>Kemenangan:</strong> Pengguna dapat mengklaim hadiah mereka segera setelah ronde diselesaikan dan data on-chain diverifikasi.",
     mech_payout_title: "Perhitungan Pembayaran",
@@ -985,7 +985,7 @@ const translations = {
     mech_q1_title: "Bagaimana pembayaran sebenarnya dihitung?",
     mech_q1_body: "Hadiah Anda bergantung pada berapa banyak orang yang bertaruh di sisi Anda vs. sisi lain. Semakin sedikit orang di sisi pemenang, semakin besar bagian setiap pemenang. Berikut penjelasan konkretnya.",
     mech_q1_ex_label: "Contoh.",
-    mech_q1_ex_body: " Sebuah ronde berakhir dengan pool UP 1.000 CHZ dan pool DOWN 2.000 CHZ, gabungan 3.000 CHZ. Anda bertaruh 10 CHZ pada UP. Rasio Pembayaran (UP) = 3.000 ÷ 1.000 = 3x. UP menang → hadiah kotor Anda = 10 × 3 = 30 CHZ, dikurangi biaya platform kecil. Karena UP adalah sisi yang lebih kecil, setiap pemenang UP mendapat pengali lebih besar. <strong>Sisi lebih kecil = hadiah lebih besar per CHZ.</strong>",
+    mech_q1_ex_body: " Sebuah ronde berakhir dengan pool UP 1.000 CHZ dan pool DOWN 2.000 CHZ, gabungan 3.000 CHZ. Anda bertaruh 30 CHZ pada UP. Rasio Pembayaran (UP) = 3.000 ÷ 1.000 = 3x. UP menang → hadiah kotor Anda = 30 × 3 = 90 CHZ, dikurangi biaya platform kecil. Karena UP adalah sisi yang lebih kecil, setiap pemenang UP mendapat pengali lebih besar. <strong>Sisi lebih kecil = hadiah lebih besar per CHZ.</strong>",
     mech_q2_title: "Apa arti \"buyback dan burn\"?",
     mech_q2_body: "Sebagian dari biaya platform digunakan untuk <strong>membeli token $FAN di pasar terbuka</strong> lalu menghancurkannya secara permanen (\"burn\"). Pembakaran mengurangi total pasokan $FAN seiring waktu, yang dapat mendukung nilainya dalam jangka panjang. Singkatnya: setiap ronde yang Anda mainkan menyumbang sedikit untuk membuat $FAN lebih langka.",
     mech_q3_title: "Apa arti \"ronde bergulir setiap 10 menit\"?",
@@ -1104,7 +1104,7 @@ const translations = {
     mech_subtitle: "Turlar, ücretler ve ödeme hesaplamaları hakkında teknik ayrıntılar.",
     mech_chain: "<strong>Blokzincir:</strong> Chiliz Chain (Mainnet) tarafından desteklenir.",
     mech_round: "<strong>Tur Sıklığı:</strong> Her 10 dakikada bir döngüsel turlar gerçekleşir.",
-    mech_minentry: "<strong>Minimum Giriş:</strong> Tur başına 10 CHZ (üst sınır yok).",
+    mech_minentry: "<strong>Minimum Giriş:</strong> Tur başına 30 CHZ (üst sınır yok).",
     mech_fee: "<strong>Platform Ücreti:</strong> Toplam ödül havuzunun küçük bir kısmı $FAN'a tahsis edilir. Bu fonlar sürekli platform geliştirmeye ayrılmıştır ve ayrıca geri alım ve yakma işlemine tabidir.",
     mech_claim: "<strong>Kazançlar:</strong> Kullanıcılar, tur sonuçlandıktan ve zincir üzerindeki veriler doğrulandıktan hemen sonra ödüllerini talep edebilir.",
     mech_payout_title: "Ödeme Hesaplaması",
@@ -1113,7 +1113,7 @@ const translations = {
     mech_q1_title: "Ödemeler gerçekte nasıl hesaplanır?",
     mech_q1_body: "Ödülünüz, sizin tarafınıza karşı diğer tarafa kaç kişinin bahis yaptığına bağlıdır. Kazanan tarafta ne kadar az kişi olursa, her kazananın payı o kadar büyük olur. İşte somut bir örnek.",
     mech_q1_ex_label: "Örnek.",
-    mech_q1_ex_body: " Bir tur, UP havuzu 1.000 CHZ ve DOWN havuzu 2.000 CHZ, toplamda 3.000 CHZ ile kapanır. UP'a 10 CHZ bahis yaptınız. Ödeme Oranı (UP) = 3.000 ÷ 1.000 = 3x. UP kazanır → brüt ödülünüz = 10 × 3 = 30 CHZ, eksi küçük bir platform ücreti. UP daha küçük taraf olduğu için, her UP kazananı daha büyük bir çarpan aldı. <strong>Daha küçük taraf = CHZ başına daha büyük ödül.</strong>",
+    mech_q1_ex_body: " Bir tur, UP havuzu 1.000 CHZ ve DOWN havuzu 2.000 CHZ, toplamda 3.000 CHZ ile kapanır. UP'a 30 CHZ bahis yaptınız. Ödeme Oranı (UP) = 3.000 ÷ 1.000 = 3x. UP kazanır → brüt ödülünüz = 30 × 3 = 90 CHZ, eksi küçük bir platform ücreti. UP daha küçük taraf olduğu için, her UP kazananı daha büyük bir çarpan aldı. <strong>Daha küçük taraf = CHZ başına daha büyük ödül.</strong>",
     mech_q2_title: "\"Geri alım ve yakma\" ne demek?",
     mech_q2_body: "Platform ücretlerinin bir kısmı, <strong>açık piyasada $FAN token satın almak</strong> ve ardından bunları kalıcı olarak yok etmek (\"yakmak\") için kullanılır. Yakma, zamanla $FAN'ın toplam arzını azaltır ve bu da uzun vadeli değerini destekleyebilir. Kısacası: oynadığınız her tur, $FAN'ı daha kıt hale getirmeye küçük bir katkı sağlar.",
     mech_q3_title: "\"Her 10 dakikada bir döngüsel turlar\" ne demek?",
@@ -1232,7 +1232,7 @@ const translations = {
     mech_subtitle: "Mga teknikal na detalye tungkol sa mga round, bayarin, at pagkalkula ng bayad.",
     mech_chain: "<strong>Blockchain:</strong> Pinapagana ng Chiliz Chain (Mainnet).",
     mech_round: "<strong>Dalas ng Round:</strong> Nagaganap ang rolling rounds bawat 10 minuto.",
-    mech_minentry: "<strong>Minimum na Entry:</strong> 10 CHZ bawat round (walang pinakamataas na limitasyon).",
+    mech_minentry: "<strong>Minimum na Entry:</strong> 30 CHZ bawat round (walang pinakamataas na limitasyon).",
     mech_fee: "<strong>Bayad sa Platform:</strong> Isang maliit na bahagi ng kabuuang prize pool ang inilalaan sa $FAN. Ang mga pondong ito ay nakatuon sa patuloy na pagpapaunlad ng platform at napapailalim din sa buyback at burn.",
     mech_claim: "<strong>Mga Panalo:</strong> Maaaring i-claim ng mga user ang kanilang gantimpala kaagad pagkatapos ma-finalize ang round at ma-verify ang on-chain data.",
     mech_payout_title: "Pagkalkula ng Bayad",
@@ -1241,7 +1241,7 @@ const translations = {
     mech_q1_title: "Paano talaga kinakalkula ang mga bayad?",
     mech_q1_body: "Ang iyong gantimpala ay nakadepende sa kung ilang tao ang tumaya sa iyong panig kumpara sa kabilang panig. Habang mas kaunti ang tao sa panig na nanalo, mas malaki ang bahagi ng bawat panalo. Narito ang isang konkretong halimbawa.",
     mech_q1_ex_label: "Halimbawa.",
-    mech_q1_ex_body: " Nagtapos ang isang round na may UP pool na 1,000 CHZ at DOWN pool na 2,000 CHZ, pinagsamang 3,000 CHZ. Tumaya ka ng 10 CHZ sa UP. Payout Ratio (UP) = 3,000 ÷ 1,000 = 3x. Nanalo ang UP → ang iyong gross na gantimpala = 10 × 3 = 30 CHZ, bawas ang maliit na bayad sa platform. Dahil ang UP ang mas maliit na panig, mas malaking multiplier ang nakuha ng bawat panalo sa UP. <strong>Mas maliit na panig = mas malaking gantimpala bawat CHZ.</strong>",
+    mech_q1_ex_body: " Nagtapos ang isang round na may UP pool na 1,000 CHZ at DOWN pool na 2,000 CHZ, pinagsamang 3,000 CHZ. Tumaya ka ng 30 CHZ sa UP. Payout Ratio (UP) = 3,000 ÷ 1,000 = 3x. Nanalo ang UP → ang iyong gross na gantimpala = 30 × 3 = 90 CHZ, bawas ang maliit na bayad sa platform. Dahil ang UP ang mas maliit na panig, mas malaking multiplier ang nakuha ng bawat panalo sa UP. <strong>Mas maliit na panig = mas malaking gantimpala bawat CHZ.</strong>",
     mech_q2_title: "Ano ang ibig sabihin ng \"buyback at burn\"?",
     mech_q2_body: "Isang bahagi ng mga bayad sa platform ang ginagamit upang <strong>bumili ng $FAN token sa bukas na merkado</strong> at pagkatapos ay permanenteng sirain (\"burn\") ang mga ito. Binabawasan ng pagsunog ang kabuuang supply ng $FAN sa paglipas ng panahon, na maaaring sumuporta sa pangmatagalang halaga nito. Sa madaling salita: ang bawat round na nilalaro mo ay nag-aambag nang kaunti upang gawing mas bihira ang $FAN.",
     mech_q3_title: "Ano ang ibig sabihin ng \"rolling rounds bawat 10 minuto\"?",
