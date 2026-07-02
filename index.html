@@ -67,6 +67,9 @@ tr:hover td { background: #fffafa; }
 /* Step image (How to Use) */
 .step-image { display: block; margin: 18px auto 32px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); border: 1px solid #eaeaea; }
 .step-image-narrow { max-width: 420px; }
+.step-image.has-caption { margin-bottom: 8px; }
+.img-caption { text-align: center; font-size: 13px; color: #888; margin: 0 auto 30px; max-width: 420px; }
+body.dark .img-caption { color: #999; }
 
 /* Section visibility */
 .section { display: none; }
@@ -141,6 +144,10 @@ body.dark .step-image { border-color: #2a2a35; box-shadow: 0 4px 16px rgba(0,0,0
   <div class="sidebar-item active" data-section="overview">
     <span class="icon">🎯</span>
     <span data-i18n="nav_overview">Overview</span>
+  </div>
+  <div class="sidebar-item" data-section="how-to-use">
+    <span class="icon">▶️</span>
+    <span data-i18n="nav_howto">How to Use</span>
   </div>
   <div class="sidebar-item" data-section="mechanics">
     <span class="icon">⚙️</span>
@@ -236,7 +243,45 @@ body.dark .step-image { border-color: #2a2a35; box-shadow: 0 4px 16px rgba(0,0,0
     <p data-i18n="how_q4_body">Once a round goes LIVE, the Locked Price is set and the outcome starts being decided in real time. If players could edit or cancel at this point, anyone watching the price could simply back out the moment it started moving against them, which would be unfair to everyone else in the pool. To keep the game honest for all players, every entry is final the moment the round goes live.</p>
   </div>
 
-  <!-- How to Use section temporarily removed (will be revised and re-added later) -->
+  <!-- ═══ How to Use (screenshots) ═══ -->
+  <div class="content section" id="how-to-use">
+    <h1><span class="emoji">▶️</span> <span data-i18n="htu_title">How to Use UP &amp; DOWN</span></h1>
+    <p class="subtitle" data-i18n="htu_subtitle">A step-by-step guide to playing your first round.</p>
+
+    <h2 data-i18n="htu_s1_title">Step 1. Read the chart and the Locked Price</h2>
+    <p data-i18n="htu_s1_body">At the top of the page you will see the live CHZ/USD chart. The <strong>LOCK / PRICE</strong> indicator (top-right, green box) shows the Locked Price for the current round and the latest CHZ price. The <strong>LOCKED ▲</strong> label inside the chart points to where the Locked Price sits on the price axis. If the Locked Price is outside the visible range, the label appears at the top edge with a ▲ arrow indicating "above the visible range."</p>
+    <img class="step-image" src="images/01-chart-locked.png" alt="CHZ chart with LOCK/PRICE summary and LOCKED label highlighted">
+
+    <h2 data-i18n="htu_s2_title">Step 2. Find the current round and the next round</h2>
+    <p data-i18n="htu_s2_body">You will see two cards. The <strong>top card</strong> is the round currently in progress (LIVE) — you can watch the pool ratio but can no longer enter. The <strong>bottom card</strong> is the <strong>next round</strong>, where you place your prediction. Submit before the live round finishes.</p>
+    <img class="step-image step-image-narrow" src="images/02-cards.png" alt="Live round (top) and Next round (bottom) cards highlighted">
+
+    <h2 data-i18n="htu_s3_title">Step 3. Choose Custom or Quick, then enter</h2>
+    <p data-i18n="htu_s3_body">First pick <strong>UP</strong> or <strong>DOWN</strong>. Then choose how to enter with the <strong>Custom / Quick</strong> toggle. In <strong>Custom</strong> you type any amount (or use +10 / +50 / +100 / Max) and press Enter. In <strong>Quick</strong> you tap one of three presets — <strong>60 / 300 / 1,200 CHZ</strong> — each showing its estimated win. Either way, the multiplier is finalised when the round locks. After you choose, your wallet's approval screen opens right away — there is no extra confirmation popup.</p>
+    <img class="step-image step-image-narrow has-caption" src="images/03-custom.png" alt="Custom entry mode with amount field highlighted">
+    <p class="img-caption" data-i18n="htu_s3_cap_custom">Custom — type your own amount.</p>
+    <img class="step-image step-image-narrow has-caption" src="images/03-quick.png" alt="Quick entry mode with presets highlighted">
+    <p class="img-caption" data-i18n="htu_s3_cap_quick">Quick — tap a preset (60 / 300 / 1,200 CHZ).</p>
+
+    <h2 data-i18n="htu_s4_title">Step 4. Track your entered position</h2>
+    <p data-i18n="htu_s4_body">Once your entry is confirmed, the next-round card shows <strong>ENTERED</strong> (your stake and direction) and <strong>EST. PAYOUT</strong> (your projected reward), both updating in real time as the pool ratio shifts. A <strong>green border</strong> marks your locked-in position. When that round becomes the live round, your position moves up to the <strong>top card</strong>, where you can keep watching ENTERED and EST. PAYOUT until it resolves. You can no longer cancel.</p>
+    <img class="step-image step-image-narrow has-caption" src="images/04-entered.png" alt="Entered position on the next-round card">
+    <p class="img-caption" data-i18n="htu_s4_cap_entered">Right after entering — on the next-round card.</p>
+    <img class="step-image step-image-narrow has-caption" src="images/04-live.png" alt="Entered round moved up to the live card">
+    <p class="img-caption" data-i18n="htu_s4_cap_live">When that round goes live, it moves to the top card.</p>
+
+    <h2 data-i18n="htu_s5_title">Step 5. Round ends, Calculating phase</h2>
+    <p data-i18n="htu_s5_body">When the live phase ends, a <strong>Calculating</strong> modal pops up briefly while the system verifies the Closed Price on-chain and computes the result. This usually takes only a few seconds. Your locked position stays highlighted with a <strong>green border</strong>.</p>
+    <img class="step-image step-image-narrow" src="images/05-calculating.png" alt="Calculating modal popup with entered card highlighted">
+
+    <h2 data-i18n="htu_s6_title">Step 6. Claim indicator on your wallet</h2>
+    <p data-i18n="htu_s6_body">Once the round settles in your favour, the wallet button (top-right) gains a <strong>red border</strong> to indicate you have an unclaimed reward. Click the wallet, then <strong>PORTFOLIO</strong> to go to the claim screen.</p>
+    <img class="step-image step-image-narrow" src="images/06-wallet-indicator.png" alt="Wallet button with red border and Portfolio menu highlighted">
+
+    <h2 data-i18n="htu_s7_title">Step 7. Claim from the Rounds page</h2>
+    <p data-i18n="htu_s7_body">In the <strong>Rounds</strong> table you will see all of your past entries. Any unclaimed wins have a green <strong>Claim</strong> button on their row. To claim everything at once, click <strong>Claim all →</strong> at the top-right of the page.</p>
+    <img class="step-image" src="images/07-rounds-claim.png" alt="Rounds table with Claim all highlighted">
+  </div>
 
   <!-- ═══ Mechanics & Fees ═══ -->
   <div class="content section" id="mechanics">
@@ -364,6 +409,7 @@ const translations = {
     sidebar_guide_label: "用户指南",
     sidebar_infra_label: "基础设施",
     nav_overview: "概览",
+    nav_howto: "使用方法",
     nav_how: "工作原理",
     nav_how_to_use: "使用方法",
     nav_mechanics: "机制与费用",
@@ -413,13 +459,17 @@ const translations = {
     htu_s1_title: "Step 1. 查看图表和锁定价格",
     htu_s1_body: "页面顶部显示 CHZ/USD 实时图表。右上角的 <strong>LOCK / PRICE</strong> 指示器（绿框）显示当前回合的锁定价格和最新的 CHZ 价格。图表内的 <strong>LOCKED ▲</strong> 标签指向锁定价格所在的价格轴位置。如果锁定价格超出可见范围，标签会出现在图表上边缘，并带有 ▲ 箭头表示\"在可见范围之上\"。",
     htu_s2_title: "Step 2. 找到当前回合和下一回合",
-    htu_s2_body: "您会看到两张卡片。<strong>上方卡片</strong>是正在进行（LIVE）的回合，您可以观察池比例，但已无法参与。<strong>下方卡片</strong>是<strong>下一回合</strong>，这是您下注预测的位置。您必须在 LIVE 回合结束前提交。",
-    htu_s3_title: "Step 3. 确认您的参与",
-    htu_s3_body: "选择 UP 或 DOWN 后，会弹出 Enter 模态框。设置您的金额，然后查看 <strong>Estimated win</strong>（预期赢得），这是基于当前池比例的预期支付。下方提示告诉您 <strong>倍率会在回合锁定时最终确定</strong>，因此实际支付可能略有不同。准备好后点击 <strong>Enter X CHZ on UP / DOWN</strong> 确认。",
+    htu_s2_body: "您会看到两张卡片。<strong>上方卡片</strong>是正在进行（LIVE）的回合，您可以观察池比例，但已无法参与。<strong>下方卡片</strong>是<strong>下一回合</strong>，这是您下注预测的位置。请在 LIVE 回合结束前提交。",
+    htu_s3_title: "Step 3. 选择 Custom 或 Quick，然后参与",
+    htu_s3_body: "先选择 <strong>UP</strong> 或 <strong>DOWN</strong>。然后用 <strong>Custom / Quick</strong> 切换选择参与方式。在 <strong>Custom</strong> 中，您可以输入任意金额（或使用 +10 / +50 / +100 / Max），然后按 Enter。在 <strong>Quick</strong> 中，您可以点击三个预设之一 —— <strong>60 / 300 / 1,200 CHZ</strong> —— 每个都显示其预期赢得。无论哪种方式，倍率都会在回合锁定时最终确定。选择后，您的钱包授权画面会立即打开 —— 没有额外的确认弹窗。",
+    htu_s3_cap_custom: "Custom —— 自行输入金额。",
+    htu_s3_cap_quick: "Quick —— 点击预设（60 / 300 / 1,200 CHZ）。",
     htu_s4_title: "Step 4. 追踪您的参与位置",
-    htu_s4_body: "确认后，您的卡片显示 <strong>ENTERED</strong>（您的下注金额和方向）和 <strong>EST. PAYOUT</strong>（预期支付），两者会随着池比例变化实时更新。卡片周围的粉色/红色边框表示这是您锁定的位置。已无法取消，只需观看回合结算。",
+    htu_s4_body: "确认后，下一回合卡片会显示 <strong>ENTERED</strong>（您的下注金额和方向）和 <strong>EST. PAYOUT</strong>（预期奖励），两者会随着池比例变化实时更新。<strong>绿色边框</strong>标示您锁定的位置。当该回合成为 LIVE 回合时，您的位置会上移到<strong>上方卡片</strong>，您可以在那里继续观察 ENTERED 和 EST. PAYOUT，直到结算。已无法取消。",
+    htu_s4_cap_entered: "参与后立即显示 —— 在下一回合卡片上。",
+    htu_s4_cap_live: "当该回合开始 LIVE 时，会移到上方卡片。",
     htu_s5_title: "Step 5. 回合结束，正在计算",
-    htu_s5_body: "当 LIVE 阶段结束时，<strong>Calculating</strong>（正在计算）模态框会短暂弹出，系统在链上验证收盘价并计算结果。通常只需几秒钟。您锁定的参与卡片继续以红色边框突出显示。",
+    htu_s5_body: "当 LIVE 阶段结束时，<strong>Calculating</strong>（正在计算）模态框会短暂弹出，系统在链上验证收盘价并计算结果。通常只需几秒钟。您锁定的位置继续以<strong>绿色边框</strong>突出显示。",
     htu_s6_title: "Step 6. 钱包上的领取指示",
     htu_s6_body: "当回合以您获胜结算后，右上角的钱包按钮会出现<strong>红色边框</strong>，表示您有未领取的奖励。点击钱包，然后点击 <strong>PORTFOLIO</strong> 进入领取页面。",
     htu_s7_title: "Step 7. 从 Rounds 页面领取",
@@ -492,6 +542,7 @@ const translations = {
     sidebar_guide_label: "ユーザーガイド",
     sidebar_infra_label: "インフラ",
     nav_overview: "概要",
+    nav_howto: "使い方",
     nav_how: "仕組み",
     nav_how_to_use: "使い方",
     nav_mechanics: "メカニズムと手数料",
@@ -541,13 +592,17 @@ const translations = {
     htu_s1_title: "Step 1. チャートとロック価格を確認",
     htu_s1_body: "ページ上部にライブの CHZ/USD チャートが表示されます。右上の <strong>LOCK / PRICE</strong> 表示（緑枠）には、現在のラウンドのロック価格と最新の CHZ 価格が表示されます。チャート内の <strong>LOCKED ▲</strong> ラベルは、価格軸上でロック価格がどこにあるかを示します。ロック価格が表示範囲外にある場合、ラベルはチャートの上端に ▲ 矢印付きで表示され、「表示範囲より上」を意味します。",
     htu_s2_title: "Step 2. 現在のラウンドと次のラウンドを確認",
-    htu_s2_body: "2 つのカードが表示されます。<strong>上のカード</strong>は現在進行中（LIVE）のラウンドで、プール比率は見られますがエントリーはもうできません。<strong>下のカード</strong>が<strong>次のラウンド</strong>で、ここで予測を入れます。現在の LIVE ラウンドが終わる前に提出しなければなりません。",
-    htu_s3_title: "Step 3. エントリーを確認",
-    htu_s3_body: "UP か DOWN を選ぶと Enter モーダルが開きます。金額を決めたら <strong>Estimated win</strong>（予想獲得額）を確認してください。これは現在のプール比率に基づく予想ペイアウトです。下の注意書きは <strong>倍率はラウンドがロックされた時点で確定する</strong>と伝えています。準備ができたら <strong>Enter X CHZ on UP / DOWN</strong> をクリックして確定します。",
+    htu_s2_body: "2 つのカードが表示されます。<strong>上のカード</strong>は現在進行中（LIVE）のラウンドで、プール比率は見られますがエントリーはもうできません。<strong>下のカード</strong>が<strong>次のラウンド</strong>で、ここで予測を入れます。LIVE ラウンドが終わる前に提出してください。",
+    htu_s3_title: "Step 3. Custom か Quick を選んでエントリー",
+    htu_s3_body: "まず <strong>UP</strong> か <strong>DOWN</strong> を選びます。次に <strong>Custom / Quick</strong> の切り替えでエントリー方法を選びます。<strong>Custom</strong> では好きな金額を入力（または +10 / +50 / +100 / Max を使用）して Enter を押します。<strong>Quick</strong> では 3 つのプリセット —— <strong>60 / 300 / 1,200 CHZ</strong> —— のいずれかをタップします。それぞれに予想獲得額が表示されます。どちらの場合も、倍率はラウンドがロックされた時点で確定します。選択すると、ウォレットの承認画面がすぐに開きます —— 追加の確認ポップアップはありません。",
+    htu_s3_cap_custom: "Custom —— 自分で金額を入力。",
+    htu_s3_cap_quick: "Quick —— プリセットをタップ（60 / 300 / 1,200 CHZ）。",
     htu_s4_title: "Step 4. エントリー中のポジションを追跡",
-    htu_s4_body: "確定後、カードに <strong>ENTERED</strong>（あなたのステークと方向）と <strong>EST. PAYOUT</strong>（予想ペイアウト）が表示され、プール比率の変化に応じてリアルタイムで更新されます。カードを囲むピンク／赤の枠は、これがあなたのロック済みポジションであることを示します。もうキャンセルはできません。ラウンドの決着を見守るだけです。",
+    htu_s4_body: "エントリーが確定すると、次のラウンドのカードに <strong>ENTERED</strong>（あなたのステークと方向）と <strong>EST. PAYOUT</strong>（予想ペイアウト）が表示され、プール比率の変化に応じてリアルタイムで更新されます。<strong>緑の枠</strong>があなたのロック済みポジションを示します。そのラウンドが LIVE ラウンドになると、あなたのポジションは<strong>上のカード</strong>に移り、決着まで ENTERED と EST. PAYOUT を見守れます。もうキャンセルはできません。",
+    htu_s4_cap_entered: "エントリー直後 —— 次のラウンドのカードに表示。",
+    htu_s4_cap_live: "そのラウンドが LIVE になると、上のカードに移動します。",
     htu_s5_title: "Step 5. ラウンド終了、Calculating フェーズ",
-    htu_s5_body: "LIVE フェーズが終わると、システムが終値をオンチェーンで検証し結果を計算する間、<strong>Calculating</strong> モーダルが短時間表示されます。通常は数秒で完了します。あなたのロック済みエントリーカードは赤枠で強調されたままです。",
+    htu_s5_body: "LIVE フェーズが終わると、システムが終値をオンチェーンで検証し結果を計算する間、<strong>Calculating</strong> モーダルが短時間表示されます。通常は数秒で完了します。あなたのロック済みポジションは<strong>緑の枠</strong>で強調されたままです。",
     htu_s6_title: "Step 6. ウォレットのクレーム表示",
     htu_s6_body: "ラウンドが勝ちで精算されると、右上のウォレットボタンに<strong>赤い枠</strong>が付き、未受取の報酬があることを知らせます。ウォレットをクリックし、<strong>PORTFOLIO</strong> へ進んでクレーム画面に行きましょう。",
     htu_s7_title: "Step 7. Rounds ページからクレーム",
@@ -620,6 +675,7 @@ const translations = {
     sidebar_guide_label: "คู่มือผู้ใช้",
     sidebar_infra_label: "โครงสร้างพื้นฐาน",
     nav_overview: "ภาพรวม",
+    nav_howto: "วิธีใช้",
     nav_how: "วิธีการทำงาน",
     nav_how_to_use: "วิธีการใช้งาน",
     nav_mechanics: "กลไกและค่าธรรมเนียม",
@@ -669,13 +725,17 @@ const translations = {
     htu_s1_title: "Step 1. อ่านกราฟและราคาล็อค",
     htu_s1_body: "ด้านบนของหน้าจะเห็นกราฟ CHZ/USD แบบสด ตัวบ่งชี้ <strong>LOCK / PRICE</strong> มุมขวาบน (กรอบเขียว) แสดงราคาล็อคของรอบปัจจุบันและราคา CHZ ล่าสุด ป้าย <strong>LOCKED ▲</strong> ภายในกราฟชี้ไปยังตำแหน่งของราคาล็อคบนแกนราคา หากราคาล็อคอยู่นอกช่วงที่มองเห็น ป้ายจะปรากฏที่ขอบบนพร้อมลูกศร ▲ บอกว่า \"อยู่เหนือช่วงที่มองเห็น\"",
     htu_s2_title: "Step 2. ค้นหารอบปัจจุบันและรอบถัดไป",
-    htu_s2_body: "คุณจะเห็นสองการ์ด <strong>การ์ดบน</strong>คือรอบที่กำลังดำเนินอยู่ (LIVE) คุณดูสัดส่วนพูลได้ แต่เข้าร่วมไม่ได้แล้ว <strong>การ์ดล่าง</strong>คือ<strong>รอบถัดไป</strong> เป็นจุดที่คุณวางการทำนาย คุณต้องส่งก่อนที่รอบ LIVE จะจบ",
-    htu_s3_title: "Step 3. ยืนยันการเข้าร่วม",
-    htu_s3_body: "หลังเลือก UP หรือ DOWN จะเปิดโมดอล Enter ตั้งจำนวน แล้วตรวจดู <strong>Estimated win</strong> (เงินรางวัลคาดการณ์) เป็นยอดจ่ายที่คาดไว้จากสัดส่วนพูลปัจจุบัน ข้อความด้านล่างบอกว่า <strong>ตัวคูณจะสิ้นสุดเมื่อรอบล็อค</strong> ดังนั้นยอดจ่ายจริงอาจต่างเล็กน้อย เมื่อพร้อม กด <strong>Enter X CHZ on UP / DOWN</strong> เพื่อยืนยัน",
+    htu_s2_body: "คุณจะเห็นการ์ดสองใบ <strong>การ์ดด้านบน</strong>คือรอบที่กำลังดำเนินอยู่ (LIVE) คุณดูอัตราส่วนพูลได้แต่เข้าร่วมไม่ได้แล้ว <strong>การ์ดด้านล่าง</strong>คือ<strong>รอบถัดไป</strong> ที่คุณวางการทำนาย ส่งก่อนที่รอบ LIVE จะจบ",
+    htu_s3_title: "Step 3. เลือก Custom หรือ Quick แล้วเข้าร่วม",
+    htu_s3_body: "เลือก <strong>UP</strong> หรือ <strong>DOWN</strong> ก่อน จากนั้นเลือกวิธีเข้าร่วมด้วยสวิตช์ <strong>Custom / Quick</strong> ใน <strong>Custom</strong> คุณพิมพ์จำนวนเท่าใดก็ได้ (หรือใช้ +10 / +50 / +100 / Max) แล้วกด Enter ใน <strong>Quick</strong> คุณแตะหนึ่งในสามพรีเซ็ต —— <strong>60 / 300 / 1,200 CHZ</strong> —— แต่ละอันแสดงเงินรางวัลโดยประมาณ ไม่ว่าวิธีใด ตัวคูณจะถูกกำหนดสุดท้ายเมื่อรอบล็อค หลังจากเลือก หน้าจออนุมัติของกระเป๋าเงินจะเปิดขึ้นทันที —— ไม่มีป๊อปอัปยืนยันเพิ่มเติม",
+    htu_s3_cap_custom: "Custom —— พิมพ์จำนวนเงินเอง",
+    htu_s3_cap_quick: "Quick —— แตะพรีเซ็ต (60 / 300 / 1,200 CHZ)",
     htu_s4_title: "Step 4. ติดตามตำแหน่งที่เข้าร่วม",
-    htu_s4_body: "เมื่อยืนยันแล้ว การ์ดของคุณจะแสดง <strong>ENTERED</strong> (จำนวนและทิศทาง) และ <strong>EST. PAYOUT</strong> ซึ่งอัปเดตแบบเรียลไทม์ตามการเปลี่ยนแปลงของสัดส่วนพูล กรอบสีชมพู/แดงรอบการ์ดหมายถึงนี่คือตำแหน่งที่คุณล็อคไว้ ยกเลิกไม่ได้แล้ว แค่รอชมรอบจบ",
+    htu_s4_body: "เมื่อยืนยันการเข้าร่วมแล้ว การ์ดรอบถัดไปจะแสดง <strong>ENTERED</strong> (จำนวนและทิศทางของคุณ) และ <strong>EST. PAYOUT</strong> (รางวัลที่คาดการณ์) ทั้งคู่อัปเดตแบบเรียลไทม์ตามอัตราส่วนพูลที่เปลี่ยน <strong>กรอบสีเขียว</strong> ทำเครื่องหมายตำแหน่งที่ล็อคของคุณ เมื่อรอบนั้นกลายเป็นรอบ LIVE ตำแหน่งของคุณจะย้ายขึ้นไปที่<strong>การ์ดด้านบน</strong> ซึ่งคุณดู ENTERED และ EST. PAYOUT ต่อได้จนกว่าจะตัดสิน คุณยกเลิกไม่ได้แล้ว",
+    htu_s4_cap_entered: "ทันทีหลังเข้าร่วม —— บนการ์ดรอบถัดไป",
+    htu_s4_cap_live: "เมื่อรอบนั้นเป็น LIVE จะย้ายไปที่การ์ดด้านบน",
     htu_s5_title: "Step 5. รอบจบ ระยะ Calculating",
-    htu_s5_body: "เมื่อเฟส LIVE จบ โมดอล <strong>Calculating</strong> จะปรากฏชั่วครู่ขณะระบบยืนยันราคาปิดบนเชนและคำนวณผลลัพธ์ มักใช้เวลาเพียงไม่กี่วินาที การ์ดเข้าร่วมที่ล็อคของคุณยังคงเน้นด้วยกรอบแดง",
+    htu_s5_body: "เมื่อเฟส LIVE จบ โมดอล <strong>Calculating</strong> จะปรากฏชั่วครู่ขณะระบบยืนยันราคาปิดบนเชนและคำนวณผลลัพธ์ มักใช้เวลาเพียงไม่กี่วินาที ตำแหน่งที่ล็อคของคุณยังคงเน้นด้วย<strong>กรอบสีเขียว</strong>",
     htu_s6_title: "Step 6. ตัวบ่งชี้ Claim บนกระเป๋าเงิน",
     htu_s6_body: "เมื่อรอบชำระเป็นชัยชนะของคุณ ปุ่มกระเป๋าเงิน (มุมขวาบน) จะมี<strong>กรอบสีแดง</strong>เพิ่มขึ้น บ่งบอกว่ามีรางวัลรอเคลม คลิกที่กระเป๋า แล้วคลิก <strong>PORTFOLIO</strong> เพื่อไปยังหน้าเคลม",
     htu_s7_title: "Step 7. เคลมจากหน้า Rounds",
@@ -748,6 +808,7 @@ const translations = {
     sidebar_guide_label: "PANDUAN PENGGUNA",
     sidebar_infra_label: "INFRASTRUKTUR",
     nav_overview: "Ringkasan",
+    nav_howto: "Cara Pakai",
     nav_how: "Cara Kerja",
     nav_how_to_use: "Cara Penggunaan",
     nav_mechanics: "Mekanisme &amp; Biaya",
@@ -797,13 +858,17 @@ const translations = {
     htu_s1_title: "Langkah 1. Baca grafik dan Locked Price",
     htu_s1_body: "Di bagian atas halaman Anda akan melihat grafik CHZ/USD langsung. Indikator <strong>LOCK / PRICE</strong> (kanan atas, kotak hijau) menunjukkan Locked Price untuk ronde saat ini dan harga CHZ terbaru. Label <strong>LOCKED ▲</strong> di dalam grafik menunjuk ke posisi Locked Price pada sumbu harga. Jika Locked Price berada di luar rentang yang terlihat, label muncul di tepi atas dengan panah ▲ yang menandakan \"di atas rentang yang terlihat\".",
     htu_s2_title: "Langkah 2. Temukan ronde saat ini dan ronde berikutnya",
-    htu_s2_body: "Anda akan melihat dua kartu. <strong>Kartu atas</strong> adalah ronde yang sedang berlangsung (LIVE), di mana Anda bisa melihat rasio pool tetapi tidak bisa lagi masuk. <strong>Kartu bawah</strong> adalah <strong>ronde berikutnya</strong>, tempat Anda menempatkan prediksi. Anda harus mengirim sebelum ronde live selesai.",
-    htu_s3_title: "Langkah 3. Konfirmasi entri Anda",
-    htu_s3_body: "Setelah memilih UP atau DOWN, modal Enter terbuka. Tetapkan jumlah Anda, lalu periksa <strong>Estimated win</strong>, yaitu perkiraan pembayaran berdasarkan rasio pool saat ini. Pemberitahuan di bawah memberi tahu Anda bahwa <strong>pengali difinalisasi saat ronde terkunci</strong>, jadi pembayaran sebenarnya bisa sedikit berbeda. Saat siap, klik <strong>Enter X CHZ on UP / DOWN</strong> untuk konfirmasi.",
+    htu_s2_body: "Anda akan melihat dua kartu. <strong>Kartu atas</strong> adalah ronde yang sedang berlangsung (LIVE) — Anda dapat melihat rasio pool tetapi tidak bisa lagi masuk. <strong>Kartu bawah</strong> adalah <strong>ronde berikutnya</strong>, tempat Anda menempatkan prediksi. Kirim sebelum ronde live selesai.",
+    htu_s3_title: "Step 3. Pilih Custom atau Quick, lalu masuk",
+    htu_s3_body: "Pilih <strong>UP</strong> atau <strong>DOWN</strong> dulu. Lalu pilih cara masuk dengan sakelar <strong>Custom / Quick</strong>. Di <strong>Custom</strong> Anda mengetik jumlah berapa pun (atau gunakan +10 / +50 / +100 / Max) lalu tekan Enter. Di <strong>Quick</strong> Anda mengetuk salah satu dari tiga preset — <strong>60 / 300 / 1,200 CHZ</strong> — masing-masing menampilkan perkiraan kemenangannya. Bagaimanapun caranya, multiplier difinalisasi saat ronde terkunci. Setelah memilih, layar persetujuan dompet Anda langsung terbuka — tidak ada popup konfirmasi tambahan.",
+    htu_s3_cap_custom: "Custom — ketik jumlah Anda sendiri.",
+    htu_s3_cap_quick: "Quick — ketuk preset (60 / 300 / 1,200 CHZ).",
     htu_s4_title: "Langkah 4. Lacak posisi entri Anda",
-    htu_s4_body: "Setelah dikonfirmasi, kartu Anda menampilkan <strong>ENTERED</strong> (jumlah dan arah taruhan) dan <strong>EST. PAYOUT</strong>, keduanya diperbarui secara real-time seiring perubahan rasio pool. Bingkai merah muda/merah di sekeliling kartu berarti ini adalah posisi terkunci Anda. Anda tidak bisa lagi membatalkan; cukup tonton ronde berakhir.",
+    htu_s4_body: "Setelah entri Anda dikonfirmasi, kartu ronde berikutnya menampilkan <strong>ENTERED</strong> (taruhan dan arah Anda) dan <strong>EST. PAYOUT</strong> (perkiraan hadiah Anda), keduanya diperbarui secara real time seiring perubahan rasio pool. <strong>Bingkai hijau</strong> menandai posisi terkunci Anda. Ketika ronde itu menjadi ronde live, posisi Anda naik ke <strong>kartu atas</strong>, di mana Anda bisa terus melihat ENTERED dan EST. PAYOUT sampai selesai. Anda tidak bisa lagi membatalkan.",
+    htu_s4_cap_entered: "Tepat setelah masuk — di kartu ronde berikutnya.",
+    htu_s4_cap_live: "Saat ronde itu live, ia pindah ke kartu atas.",
     htu_s5_title: "Langkah 5. Ronde berakhir, fase Calculating",
-    htu_s5_body: "Saat fase live berakhir, modal <strong>Calculating</strong> muncul sebentar sementara sistem memverifikasi Closed Price di on-chain dan menghitung hasilnya. Biasanya hanya butuh beberapa detik. Kartu entri terkunci Anda tetap disorot dengan bingkai merah.",
+    htu_s5_body: "Saat fase live berakhir, modal <strong>Calculating</strong> muncul sebentar sementara sistem memverifikasi Closed Price di on-chain dan menghitung hasilnya. Biasanya hanya butuh beberapa detik. Posisi terkunci Anda tetap disorot dengan <strong>bingkai hijau</strong>.",
     htu_s6_title: "Langkah 6. Indikator klaim di dompet Anda",
     htu_s6_body: "Begitu ronde diselesaikan dan Anda menang, tombol dompet (kanan atas) mendapat <strong>bingkai merah</strong> untuk menandakan Anda memiliki hadiah yang belum diklaim. Klik dompet, lalu <strong>PORTFOLIO</strong> untuk menuju layar klaim.",
     htu_s7_title: "Langkah 7. Klaim dari halaman Rounds",
@@ -876,6 +941,7 @@ const translations = {
     sidebar_guide_label: "KULLANICI KILAVUZU",
     sidebar_infra_label: "ALTYAPI",
     nav_overview: "Genel Bakış",
+    nav_howto: "Nasıl Kullanılır",
     nav_how: "Nasıl Çalışır",
     nav_how_to_use: "Nasıl Kullanılır",
     nav_mechanics: "Mekanikler ve Ücretler",
@@ -925,13 +991,17 @@ const translations = {
     htu_s1_title: "Adım 1. Grafiği ve Locked Price'ı okuyun",
     htu_s1_body: "Sayfanın üst kısmında canlı CHZ/USD grafiğini görürsünüz. <strong>LOCK / PRICE</strong> göstergesi (sağ üst, yeşil kutu) mevcut turun Locked Price'ını ve en son CHZ fiyatını gösterir. Grafiğin içindeki <strong>LOCKED ▲</strong> etiketi, Locked Price'ın fiyat ekseninde nerede olduğunu gösterir. Locked Price görünür aralığın dışındaysa, etiket üst kenarda \"görünür aralığın üzerinde\" anlamına gelen bir ▲ okuyla görünür.",
     htu_s2_title: "Adım 2. Mevcut turu ve sonraki turu bulun",
-    htu_s2_body: "İki kart göreceksiniz. <strong>Üstteki kart</strong> şu anda devam eden (LIVE) turdur; havuz oranını izleyebilir ama artık giriş yapamazsınız. <strong>Alttaki kart</strong> <strong>sonraki turdur</strong> ve tahmininizi buraya yerleştirirsiniz. Canlı tur bitmeden göndermelisiniz.",
-    htu_s3_title: "Adım 3. Girişinizi onaylayın",
-    htu_s3_body: "UP veya DOWN seçtikten sonra bir Enter penceresi açılır. Miktarınızı ayarlayın, ardından mevcut havuz oranlarına dayalı tahmini ödeme olan <strong>Estimated win</strong>'i kontrol edin. Aşağıdaki bildirim size <strong>çarpanın tur kilitlendiğinde kesinleştiğini</strong> söyler, bu yüzden gerçek ödeme biraz farklı olabilir. Hazır olduğunuzda, onaylamak için <strong>Enter X CHZ on UP / DOWN</strong>'a tıklayın.",
+    htu_s2_body: "İki kart göreceksiniz. <strong>Üstteki kart</strong> şu anda devam eden (LIVE) turdur — havuz oranını izleyebilirsiniz ancak artık giriş yapamazsınız. <strong>Alttaki kart</strong> tahmininizi yaptığınız <strong>sonraki turdur</strong>. Canlı tur bitmeden önce gönderin.",
+    htu_s3_title: "Step 3. Custom veya Quick seçin, sonra girin",
+    htu_s3_body: "Önce <strong>UP</strong> veya <strong>DOWN</strong> seçin. Ardından <strong>Custom / Quick</strong> anahtarıyla nasıl gireceğinizi seçin. <strong>Custom</strong> ile herhangi bir tutar yazarsınız (veya +10 / +50 / +100 / Max kullanırsınız) ve Enter'a basarsınız. <strong>Quick</strong> ile üç hazır seçenekten birine dokunursunuz — <strong>60 / 300 / 1,200 CHZ</strong> — her biri tahmini kazancını gösterir. Her iki durumda da çarpan, tur kilitlendiğinde kesinleşir. Seçtikten sonra cüzdanınızın onay ekranı hemen açılır — ekstra bir onay penceresi yoktur.",
+    htu_s3_cap_custom: "Custom — kendi tutarınızı yazın.",
+    htu_s3_cap_quick: "Quick — hazır seçeneğe dokunun (60 / 300 / 1,200 CHZ).",
     htu_s4_title: "Adım 4. Giriş pozisyonunuzu takip edin",
-    htu_s4_body: "Onaylandıktan sonra kartınız <strong>ENTERED</strong> (bahis miktarınız ve yönünüz) ve <strong>EST. PAYOUT</strong> gösterir; her ikisi de havuz oranları değiştikçe gerçek zamanlı güncellenir. Kartın etrafındaki pembe/kırmızı çerçeve, bunun kilitli pozisyonunuz olduğu anlamına gelir. Artık iptal edemezsiniz; sadece turun sonuçlanmasını izleyin.",
+    htu_s4_body: "Girişiniz onaylandığında, sonraki tur kartı <strong>ENTERED</strong> (bahsiniz ve yönünüz) ve <strong>EST. PAYOUT</strong> (öngörülen ödülünüz) gösterir; ikisi de havuz oranı değiştikçe gerçek zamanlı güncellenir. <strong>Yeşil çerçeve</strong> kilitli pozisyonunuzu işaret eder. O tur canlı tur olduğunda pozisyonunuz <strong>üstteki karta</strong> taşınır; orada sonuçlanana kadar ENTERED ve EST. PAYOUT'u izlemeye devam edebilirsiniz. Artık iptal edemezsiniz.",
+    htu_s4_cap_entered: "Girişten hemen sonra — sonraki tur kartında.",
+    htu_s4_cap_live: "O tur canlı olduğunda üstteki karta taşınır.",
     htu_s5_title: "Adım 5. Tur biter, Calculating aşaması",
-    htu_s5_body: "Canlı aşama bittiğinde, sistem Closed Price'ı zincir üzerinde doğrularken ve sonucu hesaplarken <strong>Calculating</strong> penceresi kısa süreliğine belirir. Genellikle yalnızca birkaç saniye sürer. Kilitli giriş kartınız kırmızı çerçeveyle vurgulanmaya devam eder.",
+    htu_s5_body: "Canlı aşama bittiğinde, sistem Closed Price'ı zincir üzerinde doğrularken ve sonucu hesaplarken <strong>Calculating</strong> penceresi kısa süreliğine belirir. Genellikle yalnızca birkaç saniye sürer. Kilitli pozisyonunuz <strong>yeşil çerçeveyle</strong> vurgulanmaya devam eder.",
     htu_s6_title: "Adım 6. Cüzdanınızdaki talep göstergesi",
     htu_s6_body: "Tur lehinize sonuçlandığında, cüzdan düğmesi (sağ üst) talep edilmemiş bir ödülünüz olduğunu belirtmek için <strong>kırmızı çerçeve</strong> kazanır. Cüzdana, ardından talep ekranına gitmek için <strong>PORTFOLIO</strong>'ya tıklayın.",
     htu_s7_title: "Adım 7. Rounds sayfasından talep edin",
@@ -1004,6 +1074,7 @@ const translations = {
     sidebar_guide_label: "GABAY NG USER",
     sidebar_infra_label: "IMPRASTRUKTURA",
     nav_overview: "Pangkalahatang-ideya",
+    nav_howto: "Paano Gamitin",
     nav_how: "Paano Ito Gumagana",
     nav_how_to_use: "Paano Gamitin",
     nav_mechanics: "Mekanika at Bayarin",
@@ -1053,13 +1124,17 @@ const translations = {
     htu_s1_title: "Hakbang 1. Basahin ang chart at ang Locked Price",
     htu_s1_body: "Sa itaas ng pahina ay makikita mo ang live na CHZ/USD chart. Ang <strong>LOCK / PRICE</strong> indicator (kanang itaas, berdeng kahon) ay nagpapakita ng Locked Price para sa kasalukuyang round at ng pinakabagong presyo ng CHZ. Ang <strong>LOCKED ▲</strong> label sa loob ng chart ay tumuturo kung nasaan ang Locked Price sa price axis. Kung ang Locked Price ay nasa labas ng nakikitang saklaw, lalabas ang label sa itaas na gilid na may ▲ arrow na nagsasaad ng \"sa itaas ng nakikitang saklaw\".",
     htu_s2_title: "Hakbang 2. Hanapin ang kasalukuyang round at ang susunod na round",
-    htu_s2_body: "Makakakita ka ng dalawang card. Ang <strong>card sa itaas</strong> ay ang round na kasalukuyang isinasagawa (LIVE), kung saan makikita mo ang pool ratio ngunit hindi ka na makakasali. Ang <strong>card sa ibaba</strong> ay ang <strong>susunod na round</strong>, kung saan mo ilalagay ang iyong prediksyon. Kailangan mong magsumite bago matapos ang live round.",
-    htu_s3_title: "Hakbang 3. Kumpirmahin ang iyong entry",
-    htu_s3_body: "Pagkatapos pumili ng UP o DOWN, magbubukas ang isang Enter modal. Itakda ang iyong halaga, pagkatapos ay tingnan ang <strong>Estimated win</strong>, na siyang inaasahang bayad batay sa kasalukuyang pool ratio. Sinasabi sa iyo ng abiso sa ibaba na <strong>napapinal ang multiplier kapag naka-lock na ang round</strong>, kaya maaaring bahagyang mag-iba ang aktwal na bayad. Kapag handa ka na, i-click ang <strong>Enter X CHZ on UP / DOWN</strong> upang kumpirmahin.",
+    htu_s2_body: "Makikita mo ang dalawang card. Ang <strong>itaas na card</strong> ay ang round na kasalukuyang isinasagawa (LIVE) — makikita mo ang pool ratio ngunit hindi ka na maaaring sumali. Ang <strong>ibabang card</strong> ay ang <strong>susunod na round</strong>, kung saan mo inilalagay ang iyong prediksyon. Isumite bago matapos ang live na round.",
+    htu_s3_title: "Step 3. Pumili ng Custom o Quick, tapos sumali",
+    htu_s3_body: "Piliin muna ang <strong>UP</strong> o <strong>DOWN</strong>. Pagkatapos piliin kung paano sasali gamit ang <strong>Custom / Quick</strong> na toggle. Sa <strong>Custom</strong> nagta-type ka ng kahit anong halaga (o gumamit ng +10 / +50 / +100 / Max) at pindutin ang Enter. Sa <strong>Quick</strong> ita-tap mo ang isa sa tatlong preset — <strong>60 / 300 / 1,200 CHZ</strong> — bawat isa ay nagpapakita ng tinatayang panalo. Alinman sa dalawa, ang multiplier ay nafi-finalize kapag na-lock ang round. Pagkatapos mong pumili, agad na bubukas ang approval screen ng iyong wallet — walang dagdag na confirmation popup.",
+    htu_s3_cap_custom: "Custom — i-type ang sarili mong halaga.",
+    htu_s3_cap_quick: "Quick — i-tap ang preset (60 / 300 / 1,200 CHZ).",
     htu_s4_title: "Hakbang 4. Subaybayan ang iyong entered na posisyon",
-    htu_s4_body: "Kapag nakumpirma na, ipinapakita ng iyong card ang <strong>ENTERED</strong> (halaga at direksyon ng iyong taya) at <strong>EST. PAYOUT</strong>, na parehong nina-update nang real-time habang nagbabago ang pool ratio. Ang pink/pulang border sa paligid ng card ay nangangahulugang ito ang iyong naka-lock na posisyon. Hindi mo na ito makakansela; panoorin na lang ang pagtatapos ng round.",
+    htu_s4_body: "Kapag nakumpirma na ang iyong entry, ipinapakita ng card ng susunod na round ang <strong>ENTERED</strong> (ang iyong taya at direksyon) at <strong>EST. PAYOUT</strong> (ang iyong tinatayang gantimpala), pareho itong nag-a-update nang real time habang nagbabago ang pool ratio. Ang <strong>berdeng border</strong> ang nagmamarka sa iyong naka-lock na posisyon. Kapag ang round na iyon ay naging live na round, ang iyong posisyon ay lilipat pataas sa <strong>itaas na card</strong>, kung saan patuloy mong makikita ang ENTERED at EST. PAYOUT hanggang matapos. Hindi mo na ito maaaring kanselahin.",
+    htu_s4_cap_entered: "Kaagad pagkatapos sumali — sa card ng susunod na round.",
+    htu_s4_cap_live: "Kapag naging live ang round na iyon, lilipat ito sa itaas na card.",
     htu_s5_title: "Hakbang 5. Natapos ang round, yugto ng Calculating",
-    htu_s5_body: "Kapag natapos na ang live na yugto, lalabas nang panandalian ang <strong>Calculating</strong> modal habang bini-verify ng sistema ang Closed Price sa on-chain at kinukwenta ang resulta. Karaniwang ilang segundo lang ito. Patuloy na naka-highlight nang may pulang border ang iyong naka-lock na entry card.",
+    htu_s5_body: "Kapag natapos na ang live na yugto, lalabas nang panandalian ang <strong>Calculating</strong> modal habang bini-verify ng sistema ang Closed Price sa on-chain at kinukwenta ang resulta. Karaniwang ilang segundo lang ito. Patuloy na naka-highlight nang may <strong>berdeng border</strong> ang iyong naka-lock na posisyon.",
     htu_s6_title: "Hakbang 6. Indicator ng claim sa iyong wallet",
     htu_s6_body: "Kapag na-settle ang round pabor sa iyo, magkakaroon ng <strong>pulang border</strong> ang wallet button (kanang itaas) upang ipahiwatig na may hindi pa na-claim na gantimpala ka. I-click ang wallet, pagkatapos ay ang <strong>PORTFOLIO</strong> upang pumunta sa claim screen.",
     htu_s7_title: "Hakbang 7. Mag-claim mula sa pahina ng Rounds",
@@ -1132,6 +1207,7 @@ const translations = {
     sidebar_guide_label: "GUIA DO USUÁRIO",
     sidebar_infra_label: "INFRAESTRUTURA",
     nav_overview: "Visão Geral",
+    nav_howto: "Como Usar",
     nav_how: "Como Funciona",
     nav_how_to_use: "Como Usar",
     nav_mechanics: "Mecânica e Taxas",
@@ -1181,13 +1257,17 @@ const translations = {
     htu_s1_title: "Passo 1. Leia o gráfico e o Locked Price",
     htu_s1_body: "No topo da página você verá o gráfico CHZ/USD ao vivo. O indicador <strong>LOCK / PRICE</strong> (canto superior direito, caixa verde) mostra o Locked Price da rodada atual e o preço mais recente do CHZ. O rótulo <strong>LOCKED ▲</strong> dentro do gráfico aponta onde o Locked Price está no eixo de preços. Se o Locked Price estiver fora do intervalo visível, o rótulo aparece na borda superior com uma seta ▲ indicando \"acima do intervalo visível\".",
     htu_s2_title: "Passo 2. Encontre a rodada atual e a próxima rodada",
-    htu_s2_body: "Você verá dois cards. O <strong>card de cima</strong> é a rodada em andamento (LIVE), onde você pode ver a proporção do pool, mas não pode mais entrar. O <strong>card de baixo</strong> é a <strong>próxima rodada</strong>, onde você coloca sua previsão. Você precisa enviar antes que a rodada live termine.",
-    htu_s3_title: "Passo 3. Confirme sua entrada",
-    htu_s3_body: "Depois de escolher UP ou DOWN, um modal Enter se abre. Defina seu valor e depois confira o <strong>Estimated win</strong>, que é o pagamento projetado com base nas proporções atuais do pool. O aviso abaixo informa que o <strong>multiplicador é finalizado quando a rodada é bloqueada</strong>, então o pagamento real pode variar ligeiramente. Quando estiver pronto, clique em <strong>Enter X CHZ on UP / DOWN</strong> para confirmar.",
+    htu_s2_body: "Você verá dois cards. O <strong>card de cima</strong> é a rodada em andamento (LIVE) — você pode ver a proporção do pool, mas não pode mais entrar. O <strong>card de baixo</strong> é a <strong>próxima rodada</strong>, onde você faz sua previsão. Envie antes que a rodada live termine.",
+    htu_s3_title: "Step 3. Escolha Custom ou Quick e entre",
+    htu_s3_body: "Primeiro escolha <strong>UP</strong> ou <strong>DOWN</strong>. Depois escolha como entrar com o botão <strong>Custom / Quick</strong>. No <strong>Custom</strong> você digita qualquer valor (ou usa +10 / +50 / +100 / Max) e pressiona Enter. No <strong>Quick</strong> você toca em um dos três presets — <strong>60 / 300 / 1,200 CHZ</strong> — cada um mostrando seu ganho estimado. De qualquer forma, o multiplicador é finalizado quando a rodada trava. Depois de escolher, a tela de aprovação da sua carteira abre imediatamente — não há popup de confirmação extra.",
+    htu_s3_cap_custom: "Custom — digite seu próprio valor.",
+    htu_s3_cap_quick: "Quick — toque em um preset (60 / 300 / 1,200 CHZ).",
     htu_s4_title: "Passo 4. Acompanhe sua posição de entrada",
-    htu_s4_body: "Depois de confirmada, seu card mostra <strong>ENTERED</strong> (seu valor e direção) e <strong>EST. PAYOUT</strong>, ambos atualizados em tempo real conforme as proporções do pool mudam. A borda rosa/vermelha ao redor do card significa que esta é sua posição bloqueada. Você não pode mais cancelar; apenas assista à rodada ser resolvida.",
+    htu_s4_body: "Assim que sua entrada é confirmada, o card da próxima rodada mostra <strong>ENTERED</strong> (seu valor e direção) e <strong>EST. PAYOUT</strong> (sua recompensa prevista), ambos atualizando em tempo real conforme a proporção do pool muda. Uma <strong>borda verde</strong> marca sua posição bloqueada. Quando essa rodada se torna a rodada live, sua posição sobe para o <strong>card de cima</strong>, onde você pode continuar vendo ENTERED e EST. PAYOUT até ser resolvida. Você não pode mais cancelar.",
+    htu_s4_cap_entered: "Logo após entrar — no card da próxima rodada.",
+    htu_s4_cap_live: "Quando essa rodada fica live, ela vai para o card de cima.",
     htu_s5_title: "Passo 5. A rodada termina, fase Calculating",
-    htu_s5_body: "Quando a fase live termina, o modal <strong>Calculating</strong> aparece brevemente enquanto o sistema verifica o Closed Price on-chain e calcula o resultado. Normalmente leva apenas alguns segundos. Seu card de entrada bloqueada continua destacado com uma borda vermelha.",
+    htu_s5_body: "Quando a fase live termina, o modal <strong>Calculating</strong> aparece brevemente enquanto o sistema verifica o Closed Price on-chain e calcula o resultado. Normalmente leva apenas alguns segundos. Sua posição bloqueada continua destacada com uma <strong>borda verde</strong>.",
     htu_s6_title: "Passo 6. Indicador de resgate na sua carteira",
     htu_s6_body: "Assim que a rodada é liquidada a seu favor, o botão da carteira (canto superior direito) ganha uma <strong>borda vermelha</strong> para indicar que você tem uma recompensa não resgatada. Clique na carteira e depois em <strong>PORTFOLIO</strong> para ir à tela de resgate.",
     htu_s7_title: "Passo 7. Resgate na página Rounds",
@@ -1260,6 +1340,7 @@ const translations = {
     sidebar_guide_label: "GUÍA DEL USUARIO",
     sidebar_infra_label: "INFRAESTRUCTURA",
     nav_overview: "Visión General",
+    nav_howto: "Cómo Usar",
     nav_how: "Cómo Funciona",
     nav_how_to_use: "Cómo Usar",
     nav_mechanics: "Mecánica y Comisiones",
@@ -1309,13 +1390,17 @@ const translations = {
     htu_s1_title: "Paso 1. Lee el gráfico y el Locked Price",
     htu_s1_body: "En la parte superior de la página verás el gráfico CHZ/USD en vivo. El indicador <strong>LOCK / PRICE</strong> (arriba a la derecha, recuadro verde) muestra el Locked Price de la ronda actual y el precio más reciente de CHZ. La etiqueta <strong>LOCKED ▲</strong> dentro del gráfico señala dónde está el Locked Price en el eje de precios. Si el Locked Price está fuera del rango visible, la etiqueta aparece en el borde superior con una flecha ▲ que indica \"por encima del rango visible\".",
     htu_s2_title: "Paso 2. Encuentra la ronda actual y la siguiente",
-    htu_s2_body: "Verás dos tarjetas. La <strong>tarjeta superior</strong> es la ronda en curso (LIVE), donde puedes ver la proporción del pool pero ya no puedes entrar. La <strong>tarjeta inferior</strong> es la <strong>siguiente ronda</strong>, donde colocas tu predicción. Debes enviarla antes de que termine la ronda en vivo.",
-    htu_s3_title: "Paso 3. Confirma tu entrada",
-    htu_s3_body: "Después de elegir UP o DOWN, se abre una ventana Enter. Define tu cantidad y luego revisa <strong>Estimated win</strong>, que es el pago estimado según las proporciones actuales del pool. El aviso de abajo te indica que el <strong>multiplicador se finaliza cuando la ronda se bloquea</strong>, por lo que el pago real puede variar ligeramente. Cuando estés listo, haz clic en <strong>Enter X CHZ on UP / DOWN</strong> para confirmar.",
+    htu_s2_body: "Verás dos tarjetas. La <strong>tarjeta superior</strong> es la ronda en curso (LIVE) — puedes ver la proporción del pool pero ya no puedes entrar. La <strong>tarjeta inferior</strong> es la <strong>próxima ronda</strong>, donde colocas tu predicción. Envía antes de que termine la ronda en vivo.",
+    htu_s3_title: "Step 3. Elige Custom o Quick y entra",
+    htu_s3_body: "Primero elige <strong>UP</strong> o <strong>DOWN</strong>. Luego elige cómo entrar con el interruptor <strong>Custom / Quick</strong>. En <strong>Custom</strong> escribes cualquier cantidad (o usas +10 / +50 / +100 / Max) y pulsas Enter. En <strong>Quick</strong> tocas uno de los tres presets — <strong>60 / 300 / 1,200 CHZ</strong> — cada uno muestra su ganancia estimada. De cualquier forma, el multiplicador se finaliza cuando la ronda se bloquea. Después de elegir, la pantalla de aprobación de tu billetera se abre de inmediato — no hay ventana de confirmación adicional.",
+    htu_s3_cap_custom: "Custom — escribe tu propia cantidad.",
+    htu_s3_cap_quick: "Quick — toca un preset (60 / 300 / 1,200 CHZ).",
     htu_s4_title: "Paso 4. Sigue tu posición de entrada",
-    htu_s4_body: "Una vez confirmada, tu tarjeta muestra <strong>ENTERED</strong> (tu cantidad y dirección) y <strong>EST. PAYOUT</strong>, ambos actualizados en tiempo real a medida que cambian las proporciones del pool. El borde rosa/rojo alrededor de la tarjeta significa que esta es tu posición bloqueada. Ya no puedes cancelar; solo observa cómo se resuelve la ronda.",
+    htu_s4_body: "Una vez confirmada tu entrada, la tarjeta de la próxima ronda muestra <strong>ENTERED</strong> (tu apuesta y dirección) y <strong>EST. PAYOUT</strong> (tu recompensa prevista), ambas actualizándose en tiempo real conforme cambia la proporción del pool. Un <strong>borde verde</strong> marca tu posición bloqueada. Cuando esa ronda se convierte en la ronda en vivo, tu posición sube a la <strong>tarjeta superior</strong>, donde puedes seguir viendo ENTERED y EST. PAYOUT hasta que se resuelva. Ya no puedes cancelar.",
+    htu_s4_cap_entered: "Justo después de entrar — en la tarjeta de la próxima ronda.",
+    htu_s4_cap_live: "Cuando esa ronda pasa a en vivo, se mueve a la tarjeta superior.",
     htu_s5_title: "Paso 5. La ronda termina, fase Calculating",
-    htu_s5_body: "Cuando termina la fase en vivo, la ventana <strong>Calculating</strong> aparece brevemente mientras el sistema verifica el Closed Price on-chain y calcula el resultado. Normalmente solo tarda unos segundos. Tu tarjeta de entrada bloqueada sigue resaltada con un borde rojo.",
+    htu_s5_body: "Cuando termina la fase en vivo, la ventana <strong>Calculating</strong> aparece brevemente mientras el sistema verifica el Closed Price on-chain y calcula el resultado. Normalmente solo tarda unos segundos. Tu posición bloqueada sigue resaltada con un <strong>borde verde</strong>.",
     htu_s6_title: "Paso 6. Indicador de reclamo en tu billetera",
     htu_s6_body: "Una vez que la ronda se liquida a tu favor, el botón de la billetera (arriba a la derecha) obtiene un <strong>borde rojo</strong> para indicar que tienes una recompensa sin reclamar. Haz clic en la billetera y luego en <strong>PORTFOLIO</strong> para ir a la pantalla de reclamo.",
     htu_s7_title: "Paso 7. Reclama desde la página Rounds",
